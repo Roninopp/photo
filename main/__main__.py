@@ -26,7 +26,7 @@ HELP = """
 """
 
 # Commands
-@app.on_message(filters.command("start"))
+@app.on_message(filters.command("pmstart"))
 async def start(bot, message: Message):
   await message.reply_photo("https://telegra.ph/file/dd62dad81f1ace73233d4.jpg",caption=START,reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton(text="Help", callback_data="help_menu"), InlineKeyboardButton(text="Repo", url="https://github.com/TechShreyash/TechZ-Wallpaper-Bot")]]))
 
