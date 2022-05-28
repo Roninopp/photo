@@ -17,11 +17,11 @@ __High Quality Wallpapers From (http://wall.alphacoders.com) And (http://unsplas
 HELP = """
 **🖼 How To Use Me ?**
 
-**To Download Wallpapers -** `/wall <search>`
+**To Download Wallpapers -** `/hdwall <search>`
 **To Download Wallpapers From Unsplash - ** `/unsplash <search>`
 
 **♻️ Example:** 
-`/wall anime`
+`/hdwall anime`
 `/unsplash cat`
 """
 
@@ -34,11 +34,11 @@ async def start(bot, message: Message):
 async def help(bot, message: Message):
   await message.reply_photo("https://te.legra.ph/file/c18ab8dbde14611c9f22f.jpg",caption=HELP,reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton(text="Back", callback_data="start_menu")]]))
 
-@app.on_message(filters.command("wall") & filters.incoming & filters.text & ~filters.forwarded & (
+@app.on_message(filters.command("hdwall") & filters.incoming & filters.text & ~filters.forwarded & (
   filters.group | filters.private))
 async def wall(bot, message: Message):
   try:
-    text = message.text.replace("wall","").replace("/","").replace("@TechZWallBot","").strip().upper()
+    text = message.text.replace("wall","").replace("/","").replace("@Ronin_Fighters_Fd","").strip().upper()
     
     if text == "":
       return await message.reply_text(HELP)
