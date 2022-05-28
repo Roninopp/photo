@@ -47,7 +47,7 @@ async def wall(bot, message: Message):
     wall = await get_wallpapers(text)
       
     if "error" in wall:
-      return await x.edit(f"`❌ Something Went Wrong...`\n\nReport This Error In @TechZBots_Support \n\n`{wall}`")
+      return await x.edit(f"`❌ Something Went Wrong...`\n\nReport This Error In @Ronin_Fighters_Fd \n\n`{wall}`")
     
     if "nonee" in wall:
       return await x.edit(f"`❌ Something Went Wrong...`\n\n`{wall}`")
