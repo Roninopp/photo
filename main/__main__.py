@@ -58,7 +58,7 @@ async def wall(bot, message: Message):
     
     id = await save_image(img)
 
-    await message.reply_photo(img,caption="**🏞 Wallpaper By @TechZWallBot**",reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton(text="Upload As File 📁", callback_data=f"wall {id}")]]))
+    await message.reply_photo(img,caption="**🏞 Wallpaper By @Ronin_Fighters_Fd**",reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton(text="Upload As File 📁", callback_data=f"wall {id}")]]))
     
     await x.delete()
   except FloodWait:
@@ -68,14 +68,14 @@ async def wall(bot, message: Message):
       await x.delete()
     except:
       pass
-    return await message.reply_text("`❌ Something Went Wrong...`\n\nReport This Error In @TechZBots_Support\n\n" + str(e))
+    return await message.reply_text("`❌ Something Went Wrong...`\n\nReport This Error In @liu_wulang_monkes\n\n" + str(e))
 
 
 @app.on_message(filters.command("unsplash") & filters.incoming & filters.text & ~filters.forwarded & (
   filters.group | filters.private))
 async def unsplash(bot, message: Message):
   try:
-    text = message.text.replace("unsplash","").replace("/","").replace("@TechZWallBot","").strip().upper()
+    text = message.text.replace("unsplash","").replace("/","").replace("@liu_wulang_monkes","").strip().upper()
     
     if text == "":
       return await message.reply_text(HELP)
@@ -84,7 +84,7 @@ async def unsplash(bot, message: Message):
     wall = await get_unsplash(text)
       
     if "error" in wall:
-      return await x.edit(f"`❌ Something Went Wrong...`\n\nReport This Error In @TechZBots_Support \n\n`{wall}`")
+      return await x.edit(f"`❌ Something Went Wrong...`\n\nReport This Error In @liu_wulang_monkes \n\n`{wall}`")
     
     if "nonee" in wall:
       return await x.edit(f"`❌ Something Went Wrong...`\n\n`{wall}`")
