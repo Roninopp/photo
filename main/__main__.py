@@ -28,7 +28,7 @@ HELP = """
 # Commands
 @app.on_message(filters.command("pmstart"))
 async def start(bot, message: Message):
-  await message.reply_photo("https://telegra.ph/file/dd62dad81f1ace73233d4.jpg",caption=START,reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton(text="Help", callback_data="help_menu"), InlineKeyboardButton(text="Repo", url="https://github.com/TechShreyash/TechZ-Wallpaper-Bot")]]))
+  await message.reply_photo("https://telegra.ph/file/dd62dad81f1ace73233d4.jpg",caption=START,reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton(text="Help", callback_data="help_menu"), InlineKeyboardButton(text="update", url="https://t.me/RoninXJin_updates")]]))
 
 @app.on_message(filters.command("help"))
 async def help(bot, message: Message):
@@ -95,7 +95,7 @@ async def unsplash(bot, message: Message):
 
     id = await save_image(wall)
     
-    await message.reply_photo(wall,caption="**🏞 Wallpaper By @TechZWallBot**",reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton(text="Upload As File 📁", callback_data=f"wall {id}")]]))
+    await message.reply_photo(wall,caption="**🏞 Wallpaper By @RoninXjin_updates**",reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton(text="Upload As File 📁", callback_data=f"wall {id}")]]))
     
     await x.delete()
   except FloodWait:
@@ -105,13 +105,13 @@ async def unsplash(bot, message: Message):
       await x.delete()
     except:
       pass
-    return await message.reply_text("`❌ Something Went Wrong...`\n\nReport This Error In @TechZBots_Support")
+    return await message.reply_text("`❌ Something Went Wrong...`\n\nReport This Error In @liu_wulang_monkes")
     
 # Callbacks
 @app.on_callback_query(filters.regex("start_menu"))
 async def start_menu(_,query):
   await query.answer()
-  await query.message.edit(START,reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton(text="Help", callback_data="help_menu"),InlineKeyboardButton(text="Repo", url="https://github.com/TechShreyash/TechZ-Wallpaper-Bot")]]))
+  await query.message.edit(START,reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton(text="Help", callback_data="help_menu"),InlineKeyboardButton(text="update", url="https://t.me/RoninXJin_updates")]]))
 
 @app.on_callback_query(filters.regex("help_menu"))
 async def help_menu(_,query):
@@ -126,13 +126,13 @@ async def logo_doc(_,query):
     await query.message.edit_reply_markup(reply_markup=None)
     id = query.data.replace("wall","").strip()
     link = await get_image(id)
-    await query.message.reply_document(link,caption="**🏞 Wallpaper By @TechZWallBot**")
+    await query.message.reply_document(link,caption="**🏞 Wallpaper By @Roninxjin_updates**")
     await del_image(id)
   except FloodWait:
     pass
   except Exception as e:
     try:
-      return await x.edit(f"`❌ Something Went Wrong...`\n\nReport This Error In @TechZBots_Support \n\n`{str(e)}`")
+      return await x.edit(f"`❌ Something Went Wrong...`\n\nReport This Error In @Ronin_Fighters_Fd \n\n`{str(e)}`")
     except:
       return
     
@@ -142,7 +142,7 @@ async def logo_doc(_,query):
 if __name__ == "__main__":
   print("==================================")
   print("[INFO]: WALLPAPER BOT STARTED BOT SUCCESSFULLY")
-  print("==========JOIN @TECHZBOTS=========")
+  print("==========JOIN @Ronin_Fighters_Fd=========")
 
   idle()
   print("[INFO]: WALLPAPER BOT STOPPED")
