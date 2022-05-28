@@ -28,11 +28,11 @@ HELP = """
 # Commands
 @app.on_message(filters.command("pmstart"))
 async def start(bot, message: Message):
-  await message.reply_photo("https://telegra.ph/file/dd62dad81f1ace73233d4.jpg",caption=START,reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton(text="Help", callback_data="help_menu"), InlineKeyboardButton(text="update", url="https://t.me/RoninXJin_updates")]]))
+  await message.reply_photo("https://te.legra.ph/file/c18ab8dbde14611c9f22f.jpg",caption=START,reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton(text="Help", callback_data="help_menu"), InlineKeyboardButton(text="update", url="https://t.me/RoninXJin_updates")]]))
 
 @app.on_message(filters.command("help"))
 async def help(bot, message: Message):
-  await message.reply_photo("https://telegra.ph/file/dd62dad81f1ace73233d4.jpg",caption=HELP,reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton(text="Back", callback_data="start_menu")]]))
+  await message.reply_photo("https://te.legra.ph/file/c18ab8dbde14611c9f22f.jpg",caption=HELP,reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton(text="Back", callback_data="start_menu")]]))
 
 @app.on_message(filters.command("wall") & filters.incoming & filters.text & ~filters.forwarded & (
   filters.group | filters.private))
