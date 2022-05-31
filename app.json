@@ -21,8 +21,6 @@
             "description": "Get this from @BotFather"
         }
     },
-
-
     "ARQ_API_KEY": {
            "description": "Get this from @ARQRobot",
            "required": true
