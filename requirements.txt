@@ -4,4 +4,4 @@ aiohttp
 python-dotenv
 motor
 dnspython
-ARQ
+python-arq
