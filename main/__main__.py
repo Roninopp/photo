@@ -11,7 +11,7 @@ START = """
 
 __High Quality Wallpapers From (http://wall.alphacoders.com) And (http://unsplash.com)__
 
-➤ Click /help Or The Button Below To Know How To Use Me
+➤ Click /hdhelp Or The Button Below To Know How To Use Me
 """
 
 HELP = """
