@@ -4,11 +4,11 @@ from dotenv import load_dotenv
 load_dotenv()
 
 # Get it from my.telegram.org
-API_ID = int(getenv("API_ID"))
-API_HASH = getenv("API_HASH")
+API_ID = int(getenv("7217645"))
+API_HASH = getenv("78ba6352dd5cdc166fdef5aa84ba7c67")
 
 ## Get it from @Botfather in Telegram.
-BOT_TOKEN = getenv("BOT_TOKEN")
+BOT_TOKEN = getenv("2100096282:AAEls5EFlORYva-cCFiXQ_xQZW2wbXIR2Wo")
 
 # API By TechZBots || https://t.me/TechZBots
 WALL_API = "https://techzbotsapi.herokuapp.com/wall?query="
